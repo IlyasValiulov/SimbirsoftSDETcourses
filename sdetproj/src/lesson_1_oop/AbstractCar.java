@@ -1,49 +1,61 @@
 package lesson_1_oop;
 
-public abstract class AbstractCar implements IMovement {
+public abstract class AbstractCar implements Movement {
     private String engine;
-    private int engine_capacity;
-    private int count_wheels;
-    private static int count_cars = 0;
-    public AbstractCar(String engine, int engine_capacity, int count_wheels) {
+    private int engineCapacity;
+    private int countWheels;
+    private static int countCars = 0;
+
+    protected AbstractCar(String engine, int engineCapacity, int countWheels) {
         this.engine = engine;
-        this.engine_capacity = engine_capacity;
-        this.count_wheels = count_wheels;
-        count_cars++;
+        this.engineCapacity = engineCapacity;
+        this.countWheels = countWheels;
+        countCars++;
     }
+
     public String getEngine() {
         return engine;
     }
+
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
     public int getEngineCapacity() {
-        return engine_capacity;
+        return engineCapacity;
     }
-    public void setEngineCapacity(int engine_capacity) {
-        this.engine_capacity = engine_capacity;
+
+    public void setEngineCapacity(int engineCapacity) {
+        this.engineCapacity = engineCapacity;
     }
+
     public int getCountWheels() {
-        return count_wheels;
+        return countWheels;
     }
-    public void setCountWheels(int count_wheels) {
-        this.count_wheels = count_wheels;
+
+    public void setCountWheels(int countWheels) {
+        this.countWheels = countWheels;
     }
+
     public static int getCountCars() {
-        return count_cars;
+        return countCars;
     }
+
     @Override
     public void goForward() {
         System.out.println("Прямо");
     }
+
     @Override
     public void goBack() {
         System.out.println("Назад");
     }
+
     @Override
     public void turnLeft() {
         System.out.println("Влево");
     }
+
     @Override
     public void turnRight() {
         System.out.println("Вправо");
