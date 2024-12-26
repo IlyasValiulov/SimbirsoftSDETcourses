@@ -29,4 +29,10 @@ bin/
 .DS_Store
 
 # Intellij project files
-.idea/
+idea/
+
+build/
+
+target/
+
+/sdetproj.iml

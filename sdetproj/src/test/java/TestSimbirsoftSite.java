@@ -20,27 +20,19 @@ public class TestSimbirsoftSite {
 
     @Test()
     public void test1() {
-        try {
-            open(link);
-            $(By.xpath("//*[contains(@class, 'gh-nav')]"))
-                    .shouldHave(
-                            text("Проекты"), text("Услуги"), text("Решения"),
-                            text("Вакансии"), text("Блог"), text("Карьера"), text("О нас"));
-        } catch (Exception ex) {
-            logger.error(ex.getMessage());
-        }
+        open(link);
+        $(By.xpath("//*[contains(@class, 'gh-nav')]"))
+                .shouldHave(
+                        text("Проекты"), text("Услуги"), text("Решения"),
+                        text("Вакансии"), text("Блог"), text("Карьера"), text("О нас"));
     }
 
     @Test
     public void test2() {
-        try {
-            open(link);
-            $(By.cssSelector("a.chat-bot"))
-                    .shouldBe(visible)
-                    .click();
-        } catch (Exception ex) {
-            logger.error(ex.getMessage());
-        }
+        open(link);
+        $(By.cssSelector("a.chat-bot"))
+                .shouldBe(visible)
+                .click();
     }
 
     @AfterTest
