@@ -27,3 +27,12 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Intellij project files
+.idea/
+
+build/
+
+target/
+
+/sdetproj.iml
